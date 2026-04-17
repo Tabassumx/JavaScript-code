@@ -27,13 +27,13 @@ var addTwoNumbers = function(l1, l2) {
         end = end.next;
     }
 
-     if (carry > 0)
-    end.next = new ListNode(carry);
-
+     /*if (carry > 0)
+    end.next = new ListNode(carry);*/ // correct  but runs slower
+    
+    if(carry== 1) end.next = new ListNode(1);
      return result.next;
 };
 //Step-by-Step Working of the Algorithm
-
 /*
 -> First  create a variable (result) and assign it a dummy ListNode (0)
     This will help us build the answer easily
